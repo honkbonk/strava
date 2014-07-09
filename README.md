@@ -48,6 +48,10 @@ Delete an activity *[2]*
 
 	$api->delete( 'activities/:id', $accessToken );
 
+Upload an activity *[2]*
+
+	$uploadResponse = $api->post( 'uploads', $accessToken, array( 'activity_type' => 'ride', 'name' => 'upload test', 'description' => 'upload test description', 'data_type' => 'tcx', 'file' => '@/path/to/the/tcx/file/uploadTest.tcx') );
+	
 ###Notes
 
 **1**. The account you register your app will give you an access token, so you can skip this step if you're just testing endpoints/methods.
